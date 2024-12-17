@@ -6,6 +6,7 @@ import MovieCard from './MovieCard';
 import apiKey from './api';
 import Head from './Header';
 import Footer from './Footer';
+import Favourite from './Favourite';
 
 function MainApp() {
   const [movies, setMovies] = useState([]);
@@ -44,6 +45,7 @@ function MainApp() {
         )}
       </div>
       {/* {selectedMovie && <MovieDetails movie={selectedMovie} />} */}
+      <Favourite />
       <Footer />
     </div>
   );
