@@ -32,7 +32,7 @@ const MovieCard = ({ movie, onClick }) => {
                 <h2 className="text-lg font-bold mt-2">{movie.original_title}</h2>
                 <p className="text-gray-500">{movie.release_date.substring(0, 4)}</p>
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleShowMovieDetails}>Movie Details</button>
-                <button className={`bg-${isFavourite ? 'red' : 'green'}-500 hover:bg-${isFavourite ? 'red' : 'green'}-700 text-blue-600 hover:text-blue-400 font-bold py-2 px-4 rounded mt-2`} onClick={handleFavouriteClick}>{isFavourite ? 'Remove from Favourites' : 'Add to Favourites'}</button>
+                <button className={`${isFavourite ? 'bg-red-500' : 'bg-green-500'} hover:${isFavourite ? 'bg-red-700' : 'bg-green-700'} text-white font-bold py-2 px-4 rounded mt-2`} onClick={handleFavouriteClick}>{isFavourite ? 'Remove from Favourites' : 'Add to Favourites'}</button>
                 {showMovieDetails && <MovieDetails movie={movie} />}
             </div>
     );
